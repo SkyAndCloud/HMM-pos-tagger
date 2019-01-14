@@ -42,13 +42,14 @@ python train.py
 
 It also caches lookup table as `token2idx.json` and `tag2idx.json`.
 
-4. evaluate `precision`, `recall` and `micro-f1` on testset using hmm model learned by step 3.
+4. evaluate `micro-f1`, `precision`, `recall` and `accuracy` on testset using hmm model learned by step 3.
 
 ```
 $ python test.py
 micro-f1 score: 0.7452485032055516
 precision score: 0.7452485032055516
 recall score: 0.7452485032055516
+accuracy score: 0.7452485032055516
 ```
 
 It also caches hypothesis as `pred.txt`

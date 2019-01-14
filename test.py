@@ -5,7 +5,7 @@ import pdb
 import json
 
 import numpy as np
-from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score
 
 with open("token2idx.json", "r", encoding="utf-8") as f:
   token2idx = json.load(f)
@@ -57,3 +57,4 @@ with open("data/test.txt", "r", encoding="utf-8") as test:
   print("micro-f1 score: {}".format(f1_score(labels, hyps, average="micro")))
   print("precision score: {}".format(precision_score(labels, hyps, average="micro")))
   print("recall score: {}".format(recall_score(labels, hyps, average="micro")))
+  print("accuracy score: {}".format(accuracy_score(labels, hyps)))
