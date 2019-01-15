@@ -21,10 +21,10 @@ see `data/raw_data.txt` for more details
 2. split `data/raw_data.txt` into `data/train.txt` and `data/test.txt` with ratio `4:1`
 
 ```python
-import numpy as np
+import random
 with open("data/raw_data.txt", "r", encoding="utf-8") as f:
   data = f.readlines()
-idx = np.random.shuffle(range(len(data)))
+random.shuffle(data)
 pivot = int(0.2 * len(data))
 testset = data[:pivot]
 trainset = data[pivot:]
